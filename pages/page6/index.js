@@ -117,7 +117,7 @@ export default function Page6() {
             {isNext ? `灰灰 :` : `賓士：`}
           </Center>
         </Box>
-        <Link href="/page6" alignSelf="center">
+        <Link href="/page7" alignSelf="center">
           <Button
             w="280px"
             borderRadius="45px"
