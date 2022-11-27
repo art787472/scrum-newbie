@@ -50,7 +50,7 @@ const cardData = [
   },
 ];
 
-export default function () {
+export default function Page7() {
   const [productList, setProductList] = useState(cardData);
   const [sprintList, setSprintList] = useState([]);
   const { isOpen, onOpen, onClose } = useDisclosure();

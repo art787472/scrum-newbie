@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 
-export default function () {
+export default function Page5() {
   return (
     <>
       <Image

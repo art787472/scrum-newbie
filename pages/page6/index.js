@@ -11,7 +11,7 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 
-export default function () {
+export default function Page6() {
   const [isNext, setNext] = useState(false);
   return (
     <>

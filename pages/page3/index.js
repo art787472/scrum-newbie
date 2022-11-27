@@ -42,7 +42,7 @@ const cardData = [
   },
 ];
 
-export default function () {
+export default function Page3() {
   const [cards, setCards] = useState(cardData);
   const [list, setList] = useState([]);
   const [isDone, setIsDone] = useState(false);
