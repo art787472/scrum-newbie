@@ -39,6 +39,7 @@ const cardData = [
   {
     title: "會員系統（登入、註冊、權限管理）",
     id: "3",
+    priority: "1",
   },
 ];
 
@@ -58,7 +59,9 @@ export default function Page3() {
       if (source.droppableId === "drop-id") {
         const newItems = [...cards];
         const [remove] = newItems.splice(source.index, 1);
-        setList([...list, remove]);
+        const newDesItems = [...list];
+        newDesItems.splice(destination.index, 0, remove);
+        setList(newDesItems);
         setCards((prev) => prev.filter((c) => c.id !== remove.id));
         return;
       }
@@ -66,7 +69,9 @@ export default function Page3() {
       if (source.droppableId === "list") {
         const newItems = [...list];
         const [remove] = newItems.splice(source.index, 1);
-        setCards([...cards, remove]);
+        const newDesItems = [...cards];
+        newDesItems.splice(destination.index, 0, remove);
+        setCards(newDesItems);
         setList((prev) => prev.filter((c) => c.id !== remove.id));
         return;
       }

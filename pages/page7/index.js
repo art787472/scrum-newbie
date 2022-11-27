@@ -69,7 +69,10 @@ export default function Page7() {
         }
         const newItems = [...productList];
         const [remove] = newItems.splice(source.index, 1);
-        setSprintList([...sprintList, remove]);
+
+        const newDesItems = [...sprintList];
+        newDesItems.splice(destination.index, 0, remove);
+        setSprintList(newDesItems);
         setProductList((prev) => prev.filter((c) => c.id !== remove.id));
         return;
       }
@@ -77,7 +80,9 @@ export default function Page7() {
       if (source.droppableId === "sprint-list") {
         const newItems = [...sprintList];
         const [remove] = newItems.splice(source.index, 1);
-        setProductList([...productList, remove]);
+        const newDesItems = [...productList];
+        newDesItems.splice(destination.index, 0, remove);
+        setProductList(newDesItems);
         setSprintList((prev) => prev.filter((c) => c.id !== remove.id));
         return;
       }
